@@ -43,15 +43,34 @@
           </div>
           <div class="navigation-links">
             <ul>
-              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="#" class="active">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Skills</a></li>
               <li><a href="#">Contact</a></li>
               <li><a href="https://www.github.com/shivam22-ab" class="github">Github&nbsp;<i class="fa-brands fa-github"></i></a></li>
             </ul>
           </div>
+          <div class="navigation-buttons">
+            <button id="bar-button">
+            <i class="fa-solid fa-bars"></i>
+            </button>
+            <button id="cross-button">
+            <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
         </nav>
         <!-- navbar design ends -->
+        <!-- Nabar for mobile starts-->
+        <nav class="mobile-navigation">
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="https://www.github.com/shivam22-ab">Github&nbsp;<i class="fa-brands fa-github"></i></a></li>
+          </ul>
+        </nav>
+        <!-- Nabar for mobile ends-->
         <!-- body desgin starts -->
         <div class="body-container">
           <div class="image">
@@ -102,19 +121,38 @@
       </div>
     </section>
     <!-- About section ends -->
+    <script src="assests/jquery/jquery3.6.js"></script>
+    <!-- Javascript -->
     <script>
       const expbtn =document.querySelector("#explore-btn");
       expbtn.addEventListener("click",clicked)
           function clicked(){
-              const popup = document.querySelector(".main-pop-up")
-                  popup.style.display="block";
+              const popup = document.querySelector(".main-pop-up");
+              popup.style.display="block";
           }
           const crossbtn =document.querySelector("#cross-btn");
           crossbtn.addEventListener("click",crossclicked)
           function crossclicked(){
-              const popup = document.querySelector(".main-pop-up")
-                  popup.style.display="none";
+              const popup = document.querySelector(".main-pop-up");
+              popup.style.display="none";
           }
     </script>
+    <!-- Javascript -->
+    <!-- Jquery -->
+    <script>
+    $(document).ready(function (){
+      $("#bar-button").click(function (){
+        $(".mobile-navigation").show(200);
+        $("#cross-button").show(200);
+        $("#bar-button").hide(200);
+      });
+      $("#cross-button").click(function (){
+        $(".mobile-navigation").hide(200);
+        $("#cross-button").hide(200);
+        $("#bar-button").show(200);
+      });
+    })
+    </script>
+    <!-- Jquery -->
   </body>
 </html>
