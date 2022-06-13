@@ -9,7 +9,10 @@
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   </head>
-  <body>
+  <body onload="preLoad()">
+    <!-- Pre-loader design starts -->
+    <div class="pre-loader"></div>
+    <!-- Pre-loader design ends -->
     <!-- Navigation design starts -->
     <section id="main-container">
       <div class="container">
@@ -43,8 +46,8 @@
           </div>
           <div class="navigation-links">
             <ul>
-              <li><a href="#" class="active">Home</a></li>
-              <li><a href="#">About</a></li>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li id="about-link"><a href="#about">About</a></li>
               <li><a href="#">Skills</a></li>
               <li><a href="#">Contact</a></li>
               <li><a href="https://www.github.com/shivam22-ab" class="github">Github&nbsp;<i class="fa-brands fa-github"></i></a></li>
@@ -63,9 +66,9 @@
         <!-- Nabar for mobile starts-->
         <nav class="mobile-navigation">
           <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Skills</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="skills">Skills</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="https://www.github.com/shivam22-ab">Github&nbsp;<i class="fa-brands fa-github"></i></a></li>
           </ul>
@@ -133,9 +136,69 @@
       </div>
     </section>
     <!-- About section ends -->
+    <!-- Skills section design starts -->
+    <section id="skills">
+      <div class="skills-section">
+        <div class="row-card">
+          <div class="main-heading"><h1>Skills</h1></div>
+            <div class="column-card">
+              <div class="heading">
+                <h1>Front End</h1>
+              </div>
+              <div class="contents">
+                <h2><i class="fa-brands fa-html5"></i>&nbsp;Html</h2>
+              </div>
+              <div class="contents">
+                <h2><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
+              </div>
+              <div class="contents">
+                <h2><i class="fa-brands fa-js-square"></i>&nbsp;Javascript</h2>
+              </div>
+              <div class="contents">
+                <h2><i class="fa-brands fa-bootstrap"></i>&nbsp;Bootstrap</h2>
+              </div>
+            </div>
+            <div class="column-card two">
+              <div class="heading">
+                <h1>Back End</h1>
+              </div>
+            </div>
+            <div class="column-card three">
+              <div class="heading">
+                <h1>Languages</h1>
+              </div>
+            </div>
+            <div class="column-card four">
+              <div class="heading">
+                <h1>Other tools</h1>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills section design ends -->
     <script src="assests/jquery/jquery3.6.js"></script>
     <!-- Javascript -->
     <script>
+      //script for preloader
+      var preloader;
+      const loader = document.querySelector(".pre-loader");
+      const container = document.querySelector(".container");
+      const about = document.querySelector("#about");
+      const skills = document.querySelector(".skills-section");
+      function preLoad(){
+        preloader = setTimeout(showpage,2000);
+        container.style.display = "none";
+        skills.style.display = "none";
+        about.style.display = "none";
+      }
+      function showpage(){
+        loader.style.display = "none";
+        container.style.display = "block";
+        about.style.display = "flex";
+        skills.style.display = "flex";
+      }
+      // script for popup
       const expbtn =document.querySelector("#explore-btn");
       expbtn.addEventListener("click",clicked)
           function clicked(){
