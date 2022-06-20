@@ -9,9 +9,9 @@
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   </head>
-  <body onload="preLoad()">
+  <body>
     <!-- Pre-loader design starts -->
-    <div class="pre-loader"></div>
+    <div class="bg-preloader"> <div class="pre-loader"></div>Loading...</div>
     <!-- Pre-loader design ends -->
     <!-- Navigation design starts -->
     <section id="main-container">
@@ -28,7 +28,7 @@
             <!-- Popup design starts -->
             <div class="pop-up-contents">
               <h1>
-                Website designing is in progess....&nbsp;<i
+                Website designing is in progess&nbsp;<i
                   class="fa-solid fa-wrench"
                 ></i>
               </h1>
@@ -110,11 +110,7 @@
           architecto eum, eaque error laudantium hic dolore minima ipsum odio
           assumenda fuga laborum iusto sapiente? Lorem ipsum dolor sit amet
           consectetur adipisicing elit. Accusamus voluptatibus minima nostrum.
-          Et nobis ipsum sed eaque quibusdam, deleniti sunt?Lorem, ipsum dolor
-          sit amet consectetur adipisicing elit. Excepturi atque sunt labore quo
-          molestiae maiores quisquam voluptatum debitis ex obcaecati! Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Ratione,
-          accusantium?Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, quas!
+          Et nobis ipsum sed eaque quibusdam. 
         </p>
         <div class="personal-details">
           <div class="left-details">
@@ -129,7 +125,7 @@
           </div>
         </div>
         <div class="download">
-          <a href="#">
+          <a href="assests/uploads/Shivam Ranabhat - Resume.pdf">
             <button id="download-btn">Resume &nbsp;<i class="fa-solid fa-download"></i></button>
           </a>
         </div>
@@ -137,7 +133,7 @@
     </section>
     <!-- About section ends -->
     <!-- Skills section design starts -->
-    <section id="skills">
+    <!-- <section id="skills">
       <div class="skills-section">
         <div class="row-card">
           <div class="main-heading"><h1>Skills</h1></div>
@@ -162,10 +158,22 @@
               <div class="heading">
                 <h1>Back End</h1>
               </div>
+              <div class="contents">
+                <h2><i class="fa-brands fa-php"></i>&nbsp;Php</h2>
+              </div>
+              <div class="contents">
+                <h2>C#</h2>
+              </div>
             </div>
             <div class="column-card three">
               <div class="heading">
                 <h1>Languages</h1>
+              </div>
+              <div class="contents">
+                <h2><i class="fa-brands fa-java"></i>Java&nbsp;</h2>
+              </div>
+              <div class="contents">
+                <h2><i class="fa-solid fa-c"></i>&nbsp;C-programming</h2>
               </div>
             </div>
             <div class="column-card four">
@@ -175,59 +183,12 @@
             </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Skills section design ends -->
     <script src="assests/jquery/jquery3.6.js"></script>
-    <!-- Javascript -->
-    <script>
-      //script for preloader
-      var preloader;
-      const loader = document.querySelector(".pre-loader");
-      const container = document.querySelector(".container");
-      const about = document.querySelector("#about");
-      const skills = document.querySelector(".skills-section");
-      function preLoad(){
-        preloader = setTimeout(showpage,2000);
-        container.style.display = "none";
-        skills.style.display = "none";
-        about.style.display = "none";
-      }
-      function showpage(){
-        loader.style.display = "none";
-        container.style.display = "block";
-        about.style.display = "flex";
-        skills.style.display = "flex";
-      }
-      // script for popup
-      const expbtn =document.querySelector("#explore-btn");
-      expbtn.addEventListener("click",clicked)
-          function clicked(){
-              const popup = document.querySelector(".main-pop-up");
-              popup.style.display="block";
-          }
-          const crossbtn =document.querySelector("#cross-btn");
-          crossbtn.addEventListener("click",crossclicked)
-          function crossclicked(){
-              const popup = document.querySelector(".main-pop-up");
-              popup.style.display="none";
-          }
-    </script>
-    <!-- Javascript -->
-    <!-- Jquery -->
-    <script>
-    $(document).ready(function (){
-      $("#bar-button").click(function (){
-        $(".mobile-navigation").show(200);
-        $("#cross-button").show(200);
-        $("#bar-button").hide(200);
-      });
-      $("#cross-button").click(function (){
-        $(".mobile-navigation").hide(200);
-        $("#cross-button").hide(200);
-        $("#bar-button").show(200);
-      });
-    })
-    </script>
-    <!-- Jquery -->
+    <!-- Javascript for popup-->
+    <script src="assests/js/popup.js"></script>
+    <!-- Javascript for hamburger menu-->
+    <script src="assests/js/hammenu.js"></script>
   </body>
 </html>
