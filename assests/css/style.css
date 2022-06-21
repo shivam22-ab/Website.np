@@ -326,62 +326,56 @@ body{
 /* section about design ends */
 /* section skills design starts */
 .skills-section{
-    background-color: #fff;
+    /* background-color: #fff; */
+    background: url(../uploads/bg-skills.jpg);
     width:100%;
     height: auto;
+    object-fit: cover;
     display: flex;
     box-shadow: 2px 2px 2px 2px rgba(29, 29, 29, 0.6);
 }
-.row-card{
-    width: 80%;
-    margin: auto;
+.skill-container{
+    background: #fff;
+    width:80%;
+    height:auto;
+    margin: 50px auto;
+    padding:30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(29, 29, 29, 0.4);
+}
+.skill-contents{
     text-align: center;
 }
-.main-heading h1{
-    display: inline-block;
-    width:100px;
-    font-size: 40px;
-    margin: 20px 0;
+.skill-contents h1{
+    display: inline;
     border-bottom: 4px solid #5ca8ff;
     border-radius: 10px;
+    padding: 5px;
+    font-size: 50px;
 }
-.column-card{
-    width: 20%;
+.skill-contents p{
+    margin: 25px 0 15px 0;
+    font-size: 20px;
+}
+.skill-row{
+    margin-left: 30px;
+}
+.skill-row .column{
+    width:20%;
     float: left;
-    margin: 20px;
-    height:400px;
-    background-color: #5ca8ff;
+    padding:18px;
+    margin: 10px 13px;
     border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(29, 29, 29, 0.4);
 }
-.column-card .heading{
-    background: rgb(198, 198, 198);
-    height: 50px;
-    border-radius: 10px 10px 0 0;
-    padding: 10px;
-    border-bottom: 3px solid rgb(66, 66, 66);
+.skill-row .column img{
+    width: 100%;
 }
-.contents{
-    padding: 20px;
-    cursor: pointer;
-}
-.contents i{
-    font-size: 30px;
-}
-.contents .fa-html5{
-    color:orangered;
-}
-.contents .fa-css3-alt{
-    color: rgb(0, 68, 255);
-}
-.contents .fa-js-square{
-    color:#FFEE37;
-}
-.contents .fa-bootstrap{
-    color: rgb(126, 58, 243);
-}
-.contents .fa-php{
-    color:#474A8A;
-    font-size: 35px;
+.skill-row h2{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+    user-select: none;
 }
 /* section skills design ends */
 /* Responsive design starts */
@@ -394,6 +388,15 @@ body{
         margin-top: 30px;
         margin-left: 5px;
     }
+    .skill-row .column{
+        width:28%;
+        float: left;
+        padding: 30px;
+        margin: 10px;
+    }
+    .skill-row .column h2{
+        font-size: 20px;
+    }
 }
 @media (max-width:900px){
     .navigation-links{
@@ -405,6 +408,12 @@ body{
     .pop-up{
         width: 60%;
     }
+    .skill-row .column{
+        width: 46%;
+        float: left;
+        padding: 10px;
+        margin: 5px;
+    }
     
 }
 @media(max-width:600px){
@@ -413,6 +422,22 @@ body{
     }
     .left-details p, .right-details p{
         text-align: center;
+    }
+    
+    .skill-row {
+        margin-left: 10px;
+    }
+    .skill-row .column{
+        margin: 0;
+        padding: 25px;
+    }
+    .skill-row .column h2{
+        font-size: 15px;
+    }
+}
+@media(max-width:400px){
+    .skill-contents h1{
+        line-height: 70px;
     }
 }
 /* Responsive design ends */
