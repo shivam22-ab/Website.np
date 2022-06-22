@@ -378,6 +378,96 @@ body{
     user-select: none;
 }
 /* section skills design ends */
+/* Contact secton design starts */
+.contact{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    box-shadow: 2px 2px 2px 2px rgba(29, 29, 29, 0.4);
+    padding: 50px;
+    overflow: auto;
+}
+.contact-contents{
+    text-align: center;
+}
+.contact-contents h1{
+    font-size: 50px;
+    display: inline;
+    border-bottom: 4px solid #5ca8ff;
+    border-radius: 10px;
+}
+.contact-contents p{
+    font-size: 20px;
+    margin: 20px 0;
+    letter-spacing: 2px;
+    line-height: 25px;
+    color: rgba(29, 29, 29, 0.6);
+}
+.left-contact, .right-contact{
+    float: left;
+    width:45%;
+    height:400px;
+    padding:20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(29, 29, 29, 0.4);
+}
+.left-contact h1{
+    color: #5ca8ff;
+}
+.left-contact .contents{
+    padding: 20px;
+}
+.left-contact p{
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: justify;
+}
+.contact-icons{
+    margin: 20px 0;
+    line-height: 40px;
+}
+.contact-icons i{
+    color: #5ca8ff;
+    font-size: 18px;
+    cursor: pointer;
+}
+.social-icons i{
+    font-size: 18px;
+    color: #fff;
+    background: #5ca8ff;
+    padding: 8px;
+    border-radius: 5px;
+    margin:7px 7px 0 0;
+    cursor: pointer;
+}
+.social-icons i:hover{
+    background: #000000;
+    color: #5ca8ff;
+}
+.right-contact{
+    background: #5ca8ff;
+    color: #fff;
+}
+.right-contact form input, textarea{
+    width: 100%;
+    border: 2px solid #fff;
+    outline: none;
+    background: transparent;
+    padding:10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+.right-contact form #submit-btn{
+    color: #5ca8ff;
+    background: #ffffff;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+.right-contact form #submit-btn:hover{
+    background: #80bbff;
+    color: #fff;
+}
+/* Contact secton design ends */
 /* Responsive design starts */
 @media (max-width:1200px){
     #about{
@@ -396,6 +486,10 @@ body{
     }
     .skill-row .column h2{
         font-size: 20px;
+    }
+    .left-contact, .right-contact{
+        width: 100%;
+        height: auto;
     }
 }
 @media (max-width:900px){
@@ -434,9 +528,18 @@ body{
     .skill-row .column h2{
         font-size: 15px;
     }
-}
-@media(max-width:400px){
     .skill-contents h1{
+        line-height: 70px;
+    }
+    .left-contact, .right-contact{
+        width: 100%;
+    }
+}
+@media (max-width:480px){
+    .contact{
+        padding: 25px;
+    }
+    .contact-contents h1{
         line-height: 70px;
     }
 }
