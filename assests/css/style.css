@@ -128,6 +128,7 @@ body{
     border-radius: 10px 10px 0 0;
 }
 .container .navbar{
+    background: rgba(29, 29, 29, 0.8);
     padding-top:20px;
     display: flex;
 }
@@ -326,7 +327,6 @@ body{
 /* section about design ends */
 /* section skills design starts */
 .skills-section{
-    /* background-color: #fff; */
     background: url(../uploads/bg-skills.jpg);
     width:100%;
     height: auto;
@@ -378,7 +378,7 @@ body{
     user-select: none;
 }
 /* section skills design ends */
-/* Contact secton design starts */
+/* Contact section design starts */
 .contact{
     width: 100%;
     height: auto;
@@ -403,9 +403,12 @@ body{
     line-height: 25px;
     color: rgba(29, 29, 29, 0.6);
 }
+.mid-contact{
+    display: flex;
+    justify-content: center;
+}
 .left-contact, .right-contact{
-    float: left;
-    width:45%;
+    flex: 50%;
     height:400px;
     padding:20px;
     border-radius: 5px;
@@ -467,7 +470,70 @@ body{
     background: #80bbff;
     color: #fff;
 }
-/* Contact secton design ends */
+/* Contact section design ends */
+/* Footer section design starts */
+.footer{
+    width:100%;
+    color: #fff;
+    background: rgba(29, 29, 29, 0.9);
+    height: auto;
+    box-shadow: 2px 2px 2px 2px rgba(29, 29, 29, 0.9);
+    padding:20px;
+    border-radius: 0 0 5px 5px;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
+.left-footer .logo #logo-text, .logo .fa-laptop-code{
+    font-size: 25px;
+    cursor: pointer;
+    user-select: none;
+}
+.left-footer h2{
+    font-size: 25px;
+    margin:15px 0 ;
+}
+.right-footer h2{
+    font-size: 18px;
+    margin:5px 0 15px 0;
+}
+.right-footer input[type="text"]{
+    padding: 9px 35px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    outline: none;
+}
+.right-footer button{
+    margin-left: -5px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background: #5ca8ff;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+.end-footer::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+.end-footer p,.social-icons{
+    font-size: 20px;
+    text-align: center;
+}
+.end-footer .social-icons{
+    margin: 20px 0;
+}
+.end-footer .social-icons i{
+    font-size: 25px;
+    padding: 15px;
+    border-radius: 50%;
+}
+/* Footer section design ends */
 /* Responsive design starts */
 @media (max-width:1200px){
     #about{
@@ -477,12 +543,6 @@ body{
     .right-content{
         margin-top: 30px;
         margin-left: 5px;
-    }
-    .skill-row .column{
-        width:28%;
-        float: left;
-        padding: 30px;
-        margin: 10px;
     }
     .skill-row .column h2{
         font-size: 20px;
@@ -505,10 +565,12 @@ body{
     .skill-row .column{
         width: 46%;
         float: left;
-        padding: 10px;
+        padding: 30px;
         margin: 5px;
     }
-    
+    .mid-contact{
+        display: block;
+    }
 }
 @media(max-width:600px){
     .personal-details{
@@ -531,9 +593,16 @@ body{
     .skill-contents h1{
         line-height: 70px;
     }
-    .left-contact, .right-contact{
-        width: 100%;
+    .footer-content:not(span){
+        display: block;
     }
+    .right-footer, .left-footer h2{
+        text-align: center;
+    }
+    .right-footer button{
+        margin-bottom: 15px;
+    }
+    
 }
 @media (max-width:480px){
     .contact{
@@ -541,6 +610,12 @@ body{
     }
     .contact-contents h1{
         line-height: 70px;
+    }
+    .skill-row .column{
+        padding: 20px;
+    }
+    .skill-container{
+        width:90%;
     }
 }
 /* Responsive design ends */
