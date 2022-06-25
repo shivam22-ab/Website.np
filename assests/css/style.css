@@ -521,11 +521,11 @@ body{
     height: 2px;
     background: #fff;
 }
-.end-footer p,.social-icons{
+.end-footer p,.footer-icons{
     font-size: 20px;
     text-align: center;
 }
-.end-footer .social-icons{
+.end-footer .footer-icons{
     margin: 20px 0;
 }
 .end-footer .social-icons i{
